@@ -1,5 +1,5 @@
 {% extends "blogs/base.html" %}
-
+{% load static %}
 {% block title %}
 	{{ blog.title }}
 {% endblock title %}
@@ -11,7 +11,9 @@
 		<hr>
 		<p>
 			{% if blog.image %}
-				<img src="{{ blog.image.url }}" alt="{{ blog.image }}">
+				<img src="{{ blog.image.url }}" alt="{{ blog.image }}" width="100%" height="auto" class="img img-thumbnail">
+			{% else %}
+				<img src="{% static 'images/default_background.jpg' %}" alt="{% static 'images/default_background.jpg' %}" width="100%" height="auto" class="round img img-thumbnail img-fluid">
 			{% endif %}
 			{{ blog.body }}
 		</p>
