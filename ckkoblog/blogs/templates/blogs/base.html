@@ -20,6 +20,9 @@
             {% block header %}
             {% endblock header %}
             <h1><a href="{% url 'blog:home' %}">Welcome to My Blog! </a></h1>
+            <div>
+                <a href="{% url 'blog:sitemap' %}" class="btn btn-outline-info">Sitemap</a>
+            </div>
         </div>
         <div class="container">
             {% block content %}
